@@ -4,13 +4,8 @@ class Logger {
     this.name = name;
   }
 
-  resetLogId () {
-    this.logId = Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8);
-  }
-
   formatLog (level, message) {
-    message = `[${this.name ? `${this.name}: ${this.logId}` : this.logId}] ${level}: ${new Date().toJSON().slice(0, -1)} ${message}`;
-    return message;
+    return `[${this.name}] ${level}: ${new Date().toJSON().slice(0, -1)} ${message}`;
   }
 
   log (message, level) {
@@ -39,28 +34,6 @@ class Logger {
     }
 
     console.error(this.formatLog('ERROR', message));
-  }
-
-  stringify (v) {
-    const cache = new Set();
-    return JSON.stringify(v, function (key, value) {
-      if (typeof value === 'object' && value !== null) {
-        if (cache.has(value)) {
-          // Circular reference found
-          try {
-            // If this value does not reference a parent it can be deduped
-            return JSON.parse(JSON.stringify(value));
-          }
-          catch (err) {
-            // discard key if value cannot be deduped
-            return;
-          }
-        }
-        // Store value in our set
-        cache.add(value);
-      }
-      return value;
-    });
   }
 }
 

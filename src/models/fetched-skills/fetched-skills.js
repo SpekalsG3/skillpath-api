@@ -19,9 +19,9 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     count: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false,
-      defaultValue: '0',
+      defaultValue: 0,
     },
   }, {
     tableName: 'fetched_skills',

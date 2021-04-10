@@ -1,4 +1,4 @@
-const { Skills, SkillSynonyms, SkillSpecializations } = require('../index').models;
+const { Skills, SkillSynonyms, SkillSpecializations, Specializations } = require('../index').models;
 
 class SkillsRepository {
   async findAll () {
@@ -6,6 +6,14 @@ class SkillsRepository {
       where: {
         is_enabled: true,
       },
+      raw: true,
+      returning: true,
+    });
+  }
+
+  async findSpecializationForAllSkills () {
+    return await SkillSpecializations.findAll({
+      include: [Specializations, Skills],
       raw: true,
       returning: true,
     });

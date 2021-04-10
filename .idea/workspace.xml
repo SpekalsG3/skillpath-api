@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fa164f2-30c5-4ee9-a547-2188d93b3679" name="Default Changelist" comment="" />
+    <list default="true" id="2fa164f2-30c5-4ee9-a547-2188d93b3679" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/dtos/fetched-skill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/dtos/specializations-for-skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/dtos/specializations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/specializations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/skills-and-specs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/fetched-skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/fetched-skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/fetched-skills/fetched-skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/fetched-skills/fetched-skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/fetched-skills/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/fetched-skills/repository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/repository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/specializations/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/specializations/repository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qho4RFZskN3HBgeSTXfrKCLDWp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.24.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="10.17.56" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -29,15 +51,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controllers/dtos" />
+      <recent name="$PROJECT_DIR$/src/controllers" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/configs" />
-      <recent name="$PROJECT_DIR$/src/services" />
-      <recent name="$PROJECT_DIR$/src/models/partners" />
     </key>
   </component>
   <component name="RunManager">
@@ -60,12 +83,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617540991430</updated>
-      <workItem from="1617540992937" duration="6308000" />
+      <workItem from="1617540992937" duration="7710000" />
+      <workItem from="1617552361546" duration="6370000" />
+      <workItem from="1617652150199" duration="7116000" />
+      <workItem from="1617742494238" duration="1082000" />
+      <workItem from="1617831783787" duration="1592000" />
+      <workItem from="1617917227407" duration="412000" />
+      <workItem from="1618054832552" duration="2208000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added routes for specializations" />
+    <option name="LAST_COMMIT_MESSAGE" value="added routes for specializations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

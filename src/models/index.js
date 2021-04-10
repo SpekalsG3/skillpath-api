@@ -21,6 +21,8 @@ const models = {
   SkillAssociations: initSkillAssociations(sequelize),
 };
 
+models.Specializations.hasMany(models.SkillSpecializations, { foreignKey: 'specialization_id' });
+
 models.SkillSynonyms.belongsTo(models.Skills, { foreignKey: 'skill_id' });
 models.SkillSpecializations.belongsTo(models.Skills, { foreignKey: 'skill_id' });
 models.SkillSpecializations.belongsTo(models.Specializations, { foreignKey: 'specialization_id' });
