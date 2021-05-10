@@ -8,6 +8,7 @@ const initSources = require('./sources/sources');
 const initSpecializations = require('./specializations/specializations');
 const initFetchedSkills = require('./fetched-skills/fetched-skills');
 const initSkillAssociations = require('./fetched-skills/skill-associations');
+const initUsers = require('./users/users');
 
 const sequelize = new Sequelize(database.name, database.user, database.password, database);
 
@@ -19,6 +20,7 @@ const models = {
   Specializations: initSpecializations(sequelize),
   FetchedSkills: initFetchedSkills(sequelize),
   SkillAssociations: initSkillAssociations(sequelize),
+  Users: initUsers(sequelize),
 };
 
 models.Specializations.hasMany(models.SkillSpecializations, { foreignKey: 'specialization_id' });

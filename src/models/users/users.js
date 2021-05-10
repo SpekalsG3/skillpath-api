@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  class Skill extends Model {
+  class User extends Model {
   }
 
-  Skill.init({
+  User.init({
     id: {
       type: DataTypes.BIGINT,
       primaryKey: true,
@@ -16,17 +16,19 @@ module.exports = (sequelize) => {
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    created_at: {
+      type: DataTypes.DATE,
+    },
   }, {
-    tableName: 'skills',
+    tableName: 'users',
     timestamps: false,
     sequelize: sequelize,
   });
 
-  return Skill;
+  return User;
 };

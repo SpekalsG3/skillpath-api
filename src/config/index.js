@@ -26,4 +26,9 @@ module.exports = {
       apiUrl: process.env.HH_API_URL,
     },
   },
+  encoding: {
+    shaSecret: process.env.SHA_SECRET,
+    jwtSecret: process.env.JWT_SECRET,
+    jwtExpirePeriod: process.env.JWT_EXPIRE_PERIOD || '30d',
+  },
 };
