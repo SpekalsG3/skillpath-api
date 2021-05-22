@@ -1,4 +1,4 @@
-module.exports = (skill) => {
+module.exports = function SpecForSkill (skill) {
   return {
     id: Number(skill['Skill.id']),
     title: skill['Skill.title'],

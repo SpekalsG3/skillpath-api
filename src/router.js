@@ -17,9 +17,13 @@ router.get('/status', (ctx) => { ctx.ok({ result: true, response: 'OK' }); });
 router.get('/parsed-skills', apiKeyVerification, FetchedSkillsController.getFetchedSkills);
 router.get('/specializations', apiKeyVerification, SpecializationsController.getSpecializations);
 router.get('/specializations/for-skills', apiKeyVerification, SkillsController.getSpecializationsForSkills);
+router.get('/associations/for-skills', apiKeyVerification, FetchedSkillsController.getAssociationsForSkills);
 
 router.post('/sign-up', apiKeyVerification, UsersController.signUp);
 router.post('/sign-in', apiKeyVerification, UsersController.signIn);
+
+router.post('/preferences', apiKeyVerification, UsersController.managePreferences);
+router.post('/preferences/get', apiKeyVerification, UsersController.getPreferences);
 
 router.all('(.*)', () => {
   throw errorBuilder.buildNotFoundError();

@@ -9,6 +9,7 @@ const initSpecializations = require('./specializations/specializations');
 const initFetchedSkills = require('./fetched-skills/fetched-skills');
 const initSkillAssociations = require('./fetched-skills/skill-associations');
 const initUsers = require('./users/users');
+const initUserPreferences = require('./users/user-preferences');
 
 const sequelize = new Sequelize(database.name, database.user, database.password, database);
 
@@ -21,6 +22,7 @@ const models = {
   FetchedSkills: initFetchedSkills(sequelize),
   SkillAssociations: initSkillAssociations(sequelize),
   Users: initUsers(sequelize),
+  UserPreferences: initUserPreferences(sequelize),
 };
 
 models.Specializations.hasMany(models.SkillSpecializations, { foreignKey: 'specialization_id' });
@@ -32,6 +34,8 @@ models.FetchedSkills.belongsTo(models.Skills, { foreignKey: 'skill_id' });
 models.FetchedSkills.belongsTo(models.Sources, { foreignKey: 'source_id' });
 models.SkillAssociations.belongsTo(models.Skills, { foreignKey: 'first_skill_id' });
 models.SkillAssociations.belongsTo(models.Skills, { foreignKey: 'second_skill_id' });
+models.UserPreferences.belongsTo(models.Users, { foreignKey: 'user_id' });
+models.UserPreferences.belongsTo(models.Skills, { foreignKey: 'skill_id' });
 
 module.exports = {
   models,

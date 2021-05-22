@@ -1,7 +1,7 @@
-module.exports = (fetchedSkill) => {
+module.exports = function User (user) {
   return {
-    id: Number(fetchedSkill['Skill.id']),
-    title: fetchedSkill['Skill.title'],
-    count: Number(fetchedSkill.count),
+    id: Number(user.id),
+    username: user.username,
+    email: user.email,
   };
 };

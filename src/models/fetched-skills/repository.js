@@ -1,4 +1,4 @@
-const { FetchedSkills, Skills } = require('../index').models;
+const { FetchedSkills, Skills, SkillAssociations } = require('../index').models;
 
 class FetchedSkillsRepository {
   async findAll ({ order, orderby }) {
@@ -18,6 +18,23 @@ class FetchedSkillsRepository {
     }
 
     return await FetchedSkills.findAll(query);
+  }
+
+  async findAllAssociations () {
+    return await SkillAssociations.findAll({
+      raw: true,
+      returning: true,
+    });
+  }
+
+  async findAllAssociationsForSkill ({ skillId }) {
+    return await SkillAssociations.findAll({
+      where: {
+        first_skill_id: skillId,
+      },
+      raw: true,
+      returning: true,
+    });
   }
 }
 

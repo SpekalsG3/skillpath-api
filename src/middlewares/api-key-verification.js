@@ -1,6 +1,6 @@
 const errorBuilder = require('../utils/error-builder');
 
-module.exports = async (ctx, next) => {
+module.exports = async function verifyApiKey (ctx, next) {
   const apiKey = ctx.headers['x-api-key'];
 
   if (!apiKey) {
